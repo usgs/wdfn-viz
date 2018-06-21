@@ -1,7 +1,8 @@
 $image-path: './img';
 
 @import 'uswds';
-@import './partials/header';
-@import './partials/footer';
 
 $usgs-blue: #00264c;
+
+@import './partials/header';
+@import './partials/footer';
