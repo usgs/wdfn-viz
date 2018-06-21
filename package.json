@@ -23,8 +23,8 @@
   "engines": {
     "node": ">= 8"
   },
-  "style": "dist/css/wdfnviz.css",
   "sass": "src/stylesheets/wdfnviz.scss",
+  "main": "src/js/wdfnviz.js",
   "dependencies": {
     "uswds": "^1.6.6"
   }

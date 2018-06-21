@@ -1,1 +1,29 @@
 # WMA Water Data for the Nation USGS visual identity package
+
+Provides Sass stylesheets and images that can be used when creating web pages that need to
+meet USGS visual identity standards. The stylesheets use USWDS (https://designsystem.digital.gov/)
+as the basis so all USWDS components are available.
+
+The repo can be installed in an existing project by installing directly from github:
+```
+% npm install git://github.com/usgs/wdfn-viz.git
+```
+
+The main Sass stylesheet that should be imported into a web page's Sass file and is at /src/stylesheets/wdfnviz.scss. This
+directory should be specified on the --include-path option when the site's Sass is built. This will also include the
+USWDS style sheets so a separate import is not required.
+
+When building the assets, the images should be collected in a common directory and specified in the project's Sass files using
+the $image-path variable. This should include the images in src/img that provide the USGS favicon and logos. If using USWDS
+images those will also need to be collected.
+
+Below are examples of commands that could be used to collect the assets and build the css files.
+
+```
+% node-sass --include-path node_modules/wdfn-via/src/stylesheets src/styles.main.css dist/main.css
+% mkdir -p dist/fonts && cp -r node_modules/uswds/src/img/* dist/img && cp -r node_modules/wdfn-viz/src/img/* dist/img
+% mkdir -p dist/fonts && cp node_modules/uswds/src/fonts/* dist/fonts 
+```
+
+Example html templates for the header and footer can be found here: ```src/templates```
+
