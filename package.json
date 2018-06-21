@@ -25,5 +25,7 @@
   },
   "style": "dist/css/wdfnviz.css",
   "sass": "src/stylesheets/wdfnviz.scss",
-  "dependencies": {}
+  "dependencies": {
+    "uswds": "^1.6.6"
+  }
 }
