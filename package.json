@@ -1,0 +1,29 @@
+{
+  "name": "wdfn-viz",
+  "version": "0.1.0dev",
+  "description": "Provides templates and style sheets which implement the USGS visual standards for headers and footers",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usgs/wdfn-viz.git"
+  },
+  "keywords": [
+    "USGS",
+    "header",
+    "footer"
+  ],
+  "author": "WMA Integrated Information Dissemination Division",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/usgs/wdfn-viz/issues"
+  },
+  "homepage": "https://github.com/usgs/wdfn-viz",
+  "engines": {
+    "node": ">= 8"
+  },
+  "style": "dist/css/wdfnviz.css",
+  "sass": "src/stylesheets/wdfnviz.scss",
+  "dependencies": {}
+}
