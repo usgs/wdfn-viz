@@ -21,7 +21,13 @@ processed by postcss as follows:
 
 When building the assets, the images should be collected in a common directory and specified in the project's Sass 
 files usingthe $image-path variable. This should include the images in src/img that provide the USGS favicon and 
-logos. If using USWDS images those will also need to be collected.
+logos. If using USWDS images those will also need to be collected. The images include a usgs_favicon.ico that can be used
+for the page's favicon by adding the following line within the <head> section:
+
+```
+<link rel="shortcut icon" type="image/ico" href="{{ url for 'img/usgs_favicon.ico'}}">
+```
+
 
 Below are examples of commands that could be used to collect the assets.
 
