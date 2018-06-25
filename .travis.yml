@@ -1,20 +1,18 @@
 language: node_js
 node_js:
-    - "lts/*"
+- lts/*
 
 addons:
-    firefox: "latest"
+  firefox: latest
 
 env:
-    global:
-    # Codacy credentials for code coverage
-    - secure: "lv5xQ9kkkqUsW08xN81yQbJXdqOO+dTjuMjCAw4DjIz2tRcfstDXHNqLpasuLP8EbBxRjYcfgWV2+6/FGeDsZKQtHtSOQdROELTBu1YPtCTJL2wm4iYKqZKBpHBxPwRhlfqfw6ry7cplyn7j33RtrzO31wDKCJ81BW9KCqAunqKfJNZfF/cehVYdv8na+5U+YHTO30yfgnb/rABjhOKhHdxCANBfopqgAARQE9mXnp7MCQ3QZPRoH9YcLKBX7hojT8Qlk7IgU+vWBFyAijr1Q6PMNunsuLPtv/5UIRhNirr70HsJ8qDtF4WkGii3BpNBpwBolkEbUEWuenHbzEYxyVWc+bNtzb3+MaJKGjnLmDAB3V1zmQe6X4kxuZcPqESF4vnD7uQHXSmvtR3MAKfrh6XmckwMcBhstVArSU6m5SnAmBIOOyIUSTcQ3usOoNOqEh0J9MkF5SXO+DDJIDlB6mYvf/6Qev4x6CoLfkCnOxmhdM+MD+hSbusbVpLwK3ohIL//cBkmoVr38mE3pZR0izwxRPMFYJlh3nvRPzpJi+jcpsQvsm7T6xfq/+xVKEwG8NTfMBKrUQcvWKc3mRzDRTuM6GckkKIe0F3dySnRa4aBD0j3opBHrC30VtMX37Cj5pdqSaWxDYmyF2kVtLhDDFQlHXiKNLGFgeiNUw4n4CE="
+  global:
+  - secure: AubzklU5F2tb9N9+MGNjCOsMcfZAKuHpA7F9l9rizz7P9f2KT4/IdhDMP60Y+WY+IP1ADB2r/BaCBJLkgf48Mw2xWifQgRS3EV7kTghfGkerO1ClgsbPU1vTl36RLDFXtUWp5YODS8f3xLrMELKiMCFhmIakgi+VZGc9z2KCXe202AM3AsmW+msiMc2YYwiUUB/SZf9A4KK/xiTwC7o/jAeMASrs8SVDdoFioI/NoFsnm+IPHWwsJwhvSqtlNGjiUTvd+k4ZChVh6FQjn+2cFQ2OWqYma6V/saaOwN1TfeubIbm3nvR70D1YkB47BG5Wl+OoHAML361PHBk60h4ojvYneftGAjwSNz8w/9Xm/KYYy8aSvO2vT86kxcfZLhDSAQeF746etUmFVUKOoVjaDX6+kV4VCot1vcDyQmBvq5uhcuR/RZPWBz9SqvrL5r7axNcIccGzBLNTq1x8IMLKLuZM5FlxgYLmSmqcr+TzUHh+4VZVVMzoJlsFVX2wGIFSDm7hsc6Jwfz1F4p7ILNDWTUGvHvpGHhztHBk/p3/OKDMzlwJ8edaX8gPMMGtdEuG0ebo5D2BjLd5dJS1y4kZG2hDj0oTZh/PseEApHoGHhwdynNtFG1qR9OakQ+pbDY+i7KZ5HsJ2GQGnwTYWGpqajoAn3Qyy8WJ4izngTNs/Is=
 
 before_script:
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 
 script:
-    - npm test
-    - cat ./coverage/F*/lcov.info | codacy-coverage
-
+- npm test
+- cat ./coverage/F*/lcov.info | node_modules/.bin/codacy-coverage --t CODACY_PROJECT_TOKEN
