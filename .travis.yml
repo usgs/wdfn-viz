@@ -6,7 +6,7 @@ addons:
   firefox: latest
 
 env:
-  global:
+  matrix:
   - secure: "AubzklU5F2tb9N9+MGNjCOsMcfZAKuHpA7F9l9rizz7P9f2KT4/IdhDMP60Y+WY+IP1ADB2r/BaCBJLkgf48Mw2xWifQgRS3EV7kTghfGkerO1ClgsbPU1vTl36RLDFXtUWp5YODS8f3xLrMELKiMCFhmIakgi+VZGc9z2KCXe202AM3AsmW+msiMc2YYwiUUB/SZf9A4KK/xiTwC7o/jAeMASrs8SVDdoFioI/NoFsnm+IPHWwsJwhvSqtlNGjiUTvd+k4ZChVh6FQjn+2cFQ2OWqYma6V/saaOwN1TfeubIbm3nvR70D1YkB47BG5Wl+OoHAML361PHBk60h4ojvYneftGAjwSNz8w/9Xm/KYYy8aSvO2vT86kxcfZLhDSAQeF746etUmFVUKOoVjaDX6+kV4VCot1vcDyQmBvq5uhcuR/RZPWBz9SqvrL5r7axNcIccGzBLNTq1x8IMLKLuZM5FlxgYLmSmqcr+TzUHh+4VZVVMzoJlsFVX2wGIFSDm7hsc6Jwfz1F4p7ILNDWTUGvHvpGHhztHBk/p3/OKDMzlwJ8edaX8gPMMGtdEuG0ebo5D2BjLd5dJS1y4kZG2hDj0oTZh/PseEApHoGHhwdynNtFG1qR9OakQ+pbDY+i7KZ5HsJ2GQGnwTYWGpqajoAn3Qyy8WJ4izngTNs/Is="
 
 before_script:
@@ -15,5 +15,5 @@ before_script:
 
 script:
 - npm test
-- cat ./coverage/F*/lcov.info | node ./bin/codacy-coverage
+- cat ./coverage/F*/lcov.info | node ./node_modules/.bin/codacy-coverage
 
