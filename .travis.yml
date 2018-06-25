@@ -15,4 +15,4 @@ before_script:
 
 script:
 - npm test
-- cat ./coverage/F*/lcov.info | node_modules/.bin/codacy-coverage --t $CODACY_PROJECT_TOKEN
+- cat ./coverage/F*/lcov.info | node_modules/.bin/codacy-coverage --token $CODACY_PROJECT_TOKEN
