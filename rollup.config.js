@@ -43,8 +43,8 @@ const getBundleConfig = function(src, dest) {
             file: dest,
             format: 'iife',
             sourcemap: 'inline'
-        },
-    }
+        }
+    };
 };
 
 module.exports = getBundleConfig('test/js/bundles/');
