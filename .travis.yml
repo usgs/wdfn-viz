@@ -16,5 +16,5 @@ before_script:
 
 script:
     - npm test
-    - codacy-coverage coverage/F*/lcov.info
+    - cat ./coverage/F*/lcov.info | codacy-coverage
 
