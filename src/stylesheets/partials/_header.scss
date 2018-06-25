@@ -1,22 +1,8 @@
-#skip {
-  a {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
-
-  a:focus {
-    position: static;
-    width: auto;
-    height: auto;
-  }
-}
 header {
   background-color: $usgs-blue;
+
   .usgs-banner-container {
+
     a {
       color: white;
       text-decoration: none;
@@ -24,6 +10,7 @@ header {
 
     .usgs-logo {
       display: inline-block;
+
       img {
         vertical-align: bottom;
         height: 44px;
@@ -40,11 +27,13 @@ header {
         }
       }
     }
+
     .usgs-header-links-container {
       font-size: $small-font-size;
       @media screen and (max-width: $small-screen) {
+
         #usgs-home-link {
-          font-size: 0px
+          font-size: 0;
         }
       }
       @include media($small-screen) {
@@ -57,5 +46,23 @@ header {
         @include unstyled-list();
       }
     }
+  }
+}
+
+#skip {
+
+  a {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  a:focus {
+    position: static;
+    width: auto;
+    height: auto;
   }
 }
