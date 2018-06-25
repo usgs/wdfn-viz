@@ -1,5 +1,7 @@
 # WMA Water Data for the Nation USGS visual identity package
 
+[![Build Status](https://travis-ci.org/usgs/wdfn-viz.svg?branch=master)](https://travis-ci.org/usgs/wdfn-viz)
+
 Provides Sass stylesheets and images that can be used when creating web pages that need to
 meet USGS visual identity standards. The stylesheets use USWDS (https://designsystem.digital.gov/)
 as the basis so all USWDS components are available.
