@@ -31,6 +31,6 @@ wdfnviz.main = function(onLoadFnc) {
         );
 
     }
-}
+};
 
 module.exports = wdfnviz;

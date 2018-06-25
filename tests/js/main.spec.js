@@ -1,4 +1,4 @@
-import wdfnviz from '../../src/js/main.js'
+import wdfnviz from '../../src/js/main.js';
 
 describe('wdfn-viz tests', () => {
 
@@ -25,7 +25,7 @@ describe('wdfn-viz tests', () => {
 
         if (document.readyState !== 'loading') {
             expect(function() {
-                wdfnviz.main(testFunc)
+                wdfnviz.main(testFunc);
             }).toThrow('Test error handling');
 
             expect(window.ga).toHaveBeenCalled();
@@ -33,7 +33,7 @@ describe('wdfn-viz tests', () => {
         } else {
             document.addEventListener('DOMContentLoaded', () => {
                 expect(function() {
-                    wdfnviz.main(testFunc)
+                    wdfnviz.main(testFunc);
                 }).toThrow('Test error handling');
 
                 expect(window.ga).toHaveBeenCalled();

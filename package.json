@@ -30,6 +30,8 @@
     "uswds": "^1.6.6"
   },
   "devDependencies": {
+    "eslint": "^5.0.0",
+    "eslint-plugin-jasmine": "^2.10.1",
     "jasmine-core": "^2.99.1",
     "karma": "^2.0.4",
     "karma-chrome-launcher": "^2.2.0",
