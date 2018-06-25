@@ -25,6 +25,7 @@
   },
   "globals": {
     "window": true,
-    "document": true
+    "document": true,
+    "console": true
   }
 }

@@ -1,3 +1,10 @@
+/* global process, module */
+var istanbul = require('rollup-plugin-istanbul');
+
+function isDebug(argument) {
+    return argument === '--debug';
+}
+
 module.exports = function (config) {
     /**
      * Base configuration shared by all run configurations
@@ -66,6 +73,40 @@ module.exports = function (config) {
         // how many browser should be started simultaneous
         concurrency: Infinity
     };
+
+    /**
+     * Produce a code coverage report
+     */
+    if (!process.argv.some(isDebug)) {
+        karmaConfig = {
+            ...karmaConfig,
+            rollupPreprocessor: {
+                ...karmaConfig.rollupPreprocessor,
+                plugins: [
+                    ...karmaConfig.rollupPreprocessor.plugins,
+                    istanbul({
+                        exclude: [
+                            'tests/**/*.js',
+                            'node_modules/**/*.js'
+                        ]
+                    })
+                ]
+            },
+            reporters: [
+                ...karmaConfig.reporters,
+                'coverage'
+            ],
+            coverageReporter: {
+                reporters: [
+                    //{type: 'html', dir: 'coverage/'},
+                    {type: 'cobertura', dir: 'coverage/'},
+                    {type: 'lcovonly', dir: 'coverage/'}
+                ]
+            }
+        };
+    } else {
+        console.log('Skipping code coverage report...');
+    }
 
     config.set(karmaConfig);
 };
