@@ -1,10 +1,10 @@
-import wdfnviz from '../../src/js/main.js';
+import { loadDom } from '../../src/js/main.js';
 
 describe('wdfn-viz tests', () => {
 
     it('Function is called after DOM has been loaded', (done) => {
         let loadFncSpy = jasmine.createSpy('loadFncSpy');
-        wdfnviz.main(loadFncSpy);
+        loadDom(loadFncSpy);
         if (document.readyState !== 'loading') {
             expect(loadFncSpy).toHaveBeenCalled();
             done();
@@ -25,7 +25,7 @@ describe('wdfn-viz tests', () => {
 
         if (document.readyState !== 'loading') {
             expect(function() {
-                wdfnviz.main(testFunc);
+                loadDom(testFunc);
             }).toThrow('Test error handling');
 
             expect(window.ga).toHaveBeenCalled();
@@ -33,7 +33,7 @@ describe('wdfn-viz tests', () => {
         } else {
             document.addEventListener('DOMContentLoaded', () => {
                 expect(function() {
-                    wdfnviz.main(testFunc);
+                    loadDom(testFunc);
                 }).toThrow('Test error handling');
 
                 expect(window.ga).toHaveBeenCalled();
