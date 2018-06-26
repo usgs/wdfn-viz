@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- lts/*
+
+addons:
+  firefox: latest
+
+before_script:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+
+script:
+- npm test
+##- cat ./coverage/F*/lcov.info | node ./node_modules/.bin/codacy-coverage
+
