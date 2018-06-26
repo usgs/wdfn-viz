@@ -41,7 +41,7 @@ const getBundleConfig = function(src, dest) {
         output: {
             name: 'wdfnviz_bundle',
             file: dest,
-            format: 'umd',
+            format: 'es',
             sourcemap: 'inline'
         }
     };
