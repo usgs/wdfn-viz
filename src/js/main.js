@@ -1,5 +1,6 @@
-import 'uswds';
+require('uswds');
 
+let wdfnviz = {};
 
 let load = function(onLoadFnc) {
     // NOTE: Here we use a try/catch block rather than a global "onerror"
@@ -20,7 +21,7 @@ let load = function(onLoadFnc) {
     }
 };
 
-export const loadDom = function(onLoadFnc) {
+wdfnviz.main = function(onLoadFnc) {
     if (document.readyState !== 'loading') {
         load(onLoadFnc);
     } else {
@@ -32,3 +33,4 @@ export const loadDom = function(onLoadFnc) {
     }
 };
 
+module.exports = wdfnviz;
