@@ -26,14 +26,11 @@ When building the assets, the images should be collected in a common directory a
 files using the $image-path variable. This should include the images in src/img that provide the USGS favicon and 
 logos. If using USWDS images those will also need to be collected. The images include a usgs_favicon.ico that can be used
 for the page's favicon by adding the following line within the <head> section:
-
 ```
 <link rel="shortcut icon" type="image/ico" href="{{ url for 'img/usgs_favicon.ico'}}">
 ```
 
-
 Below are examples of commands that could be used to collect the assets.
-
 ```
 % mkdir -p dist/img && cp -r node_modules/uswds/src/img/* dist/img && cp -r node_modules/wdfn-viz/src/img/* dist/img
 % mkdir -p dist/fonts && cp node_modules/uswds/src/fonts/* dist/fonts 
@@ -41,7 +38,6 @@ Below are examples of commands that could be used to collect the assets.
 
 The javascript can be imported and provides USWDS javascript as well as the ability to log unhandled exceptions to
 Google Analytics if window.ga is defined.
-
 
 Example html templates for the header and footer can be found here: ```src/templates```. To implement the header
 and footers add the markup in those templates to your pages, adjusting the image url in the header.html template 
