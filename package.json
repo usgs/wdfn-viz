@@ -3,11 +3,19 @@
   "version": "0.1.0dev",
   "description": "Provides templates and style sheets which implement the USGS visual standards for headers and footers",
   "scripts": {
-    "build": "mkdir -p dist && run-p build:*",
+    "build": "npm run clean && mkdir -p dist && run-p build:*",
     "build:js": "rollup -c --environment NODE_ENV:production",
     "build:css": "node-sass src/stylesheets/wdfnviz.scss dist/wdfnviz.css && postcss dist/wdfnviz.css --no-map --use autoprefixer postcss-flexbugs-fixes -o dist/wdfnviz.css && uglifycss --output dist/wdfnviz.min.css dist/wdfnviz.css",
+    "build:fonts": "mkdir -p dist/fonts && cp -r node_modules/uswds/dist/fonts/* dist/fonts",
+    "build:images": "mkdir -p dist/img && cp -r src/img/* dist/img && cp -r node_modules/uswds/dist/img/* dist/img",
+    "clean": "rm -rf dist && mkdir dist",
     "test": "karma start",
-    "test:watch": "karma start --debug --no-single-run --browsers Chrome"
+    "test:watch": "karma start --debug --no-single-run --browsers Chrome",
+    "watch": "run-p watch:*",
+    "watch:css": "nodemon -w src/stylesheets -e scss -x \"npm run build:css\"",
+    "watch:fonts": "npm run build:fonts",
+    "watch:images": "npm run build:images",
+    "watch:js": "rollup -c --watch"
   },
   "repository": {
     "type": "git",
