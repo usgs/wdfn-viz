@@ -48,7 +48,7 @@
     "src"
   ],
   "dependencies": {
-    "uswds": "^1.6.8"
+    "uswds": "^2.0.0-beta"
   },
   "devDependencies": {
     "ajv": "^6.5.4",
