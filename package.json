@@ -1,6 +1,6 @@
 {
   "name": "wdfn-viz",
-  "version": "0.1.0dev",
+  "version": "0.1.0",
   "description": "Provides templates and style sheets which implement the USGS visual standards for headers and footers",
   "scripts": {
     "build": "npm run clean && mkdir -p dist && run-p build:*",
@@ -10,6 +10,7 @@
     "build:html": "nunjucks --path src --out dist --unsafe index.html",
     "build:images": "mkdir -p dist/img && cp -r src/img/* dist/img && cp -r node_modules/uswds/dist/img/* dist/img",
     "clean": "rm -rf dist && mkdir dist",
+    "prepublish": "npm run build",
     "serve": "live-server --port=9000 --cors dist",
     "start": "run-p watch serve",
     "test": "karma start",
