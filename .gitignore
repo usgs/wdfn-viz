@@ -62,3 +62,10 @@ typings/
 
 # IDE directoreis
 .idea
+
+# Sublime Text project files
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts
+dist/

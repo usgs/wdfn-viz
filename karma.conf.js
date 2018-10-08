@@ -45,7 +45,13 @@ module.exports = function (config) {
              * This is just a normal Rollup config object,
              * except that `input` is handled for you.
              */
-            ...require('./rollup.config')
+            ...{
+                ...require('./rollup.config'),
+                output: {
+                    format: 'iife',
+                    name: 'tests'
+                }
+            }
         },
 
         // web server port

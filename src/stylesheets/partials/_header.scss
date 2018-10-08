@@ -1,11 +1,24 @@
-header {
+$header-link-color: #ffffff;
+
+.usgs-header {
   background-color: $usgs-blue;
 
+  .usa-banner {
+    .usa-accordion {
+      width: units('desktop');
+    }
+    .usa-banner-content {
+      @include grid-container('desktop');
+    }
+  }
+
   .usgs-banner-container {
+    @include grid-container($theme-site-max-width);
 
     a {
-      color: white;
+      color: $header-link-color;
       text-decoration: none;
+      display: inline-block;
     }
 
     .usgs-logo {
@@ -13,31 +26,30 @@ header {
 
       img {
         vertical-align: bottom;
-        height: 44px;
-        margin: .5em;
-        @include media($small-screen) {
-          height: 51px;
-          margin: 1em;
+        height: 2.75em;
+        margin: .5em 0;
+        @include at-media('mobile') {
+          height: 3.1875em;
+          margin: 1em 0;
         }
-        @include media($medium-screen) {
-          height: 58px;
+        @include at-media('tablet') {
+          height: 3.625em;
         }
-        @include media($large-screen) {
-          height: 65px;
+        @include at-media('desktop') {
+          height: 4.0625em;
         }
       }
     }
 
     .usgs-header-links-container {
-      font-size: $small-font-size;
-      @media screen and (max-width: $small-screen) {
-
+      font-size: $theme-small-font-size;
+      @include at-media('mobile') {
         #usgs-home-link {
           font-size: 0;
         }
       }
-      @include media($small-screen) {
-        font-size: $base-font-size
+      @include at-media('mobile') {
+        //font-size: $theme-base-font-size
       }
       display: inline-block;
       float: right;

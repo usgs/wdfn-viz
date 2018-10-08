@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="wdfnviz.css">
+        <script async src="wdfnviz.js"></script>
+        <title>Test Page - USGS Water Data For The Nation</title>
+    </head>
+    <body>
+        {% macro url_for(path) %}{{ path }}{% endmacro %}
+        {% include "templates/header.html" %}
+        <main>
+            <p>This is a test of the USGS Water Data For The Nation visual identity system.</p>
+        </main>
+        {% include "templates/footer.html" %}
+    </body>
+</html>
