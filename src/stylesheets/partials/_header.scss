@@ -20,6 +20,10 @@ $header-link-color: #ffffff;
     .usgs-logo {
       display: inline-block;
 
+      .usa-logo-text {
+        width: 100%;
+      }
+
       img {
         vertical-align: bottom;
         height: 2.75em;
