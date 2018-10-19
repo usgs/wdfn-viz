@@ -19,7 +19,7 @@
     "watch": "run-p watch:*",
     "watch:css": "nodemon -w src/stylesheets -e scss -x \"npm run build:css\"",
     "watch:fonts": "npm run build:fonts",
-    "watch:html": "nunjucks --watch --path src --out dist --unsafe index.html",
+    "watch:html": "nodemon -w src -e scss,html -x \"echo Rebuilding... && nunjucks --path src --out dist --unsafe index.html\"",
     "watch:images": "npm run build:images",
     "watch:js": "rollup -c --watch",
     "watch:sass": "npm run build:sass"
