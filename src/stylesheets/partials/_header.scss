@@ -3,6 +3,11 @@ $header-link-color: #ffffff;
 .usgs-header {
   background-color: $usgs-blue;
 
+  .usa-banner-header {
+    @include u-padding-y(0.5);
+    min-height: 0;
+  }
+
   .usgs-banner-container {
     @include grid-container($theme-site-max-width);
 
@@ -30,6 +35,28 @@ $header-link-color: #ffffff;
           height: 4.0625em;
         }
       }
+    }
+  }
+}
+
+.usgs-menu-header {
+  border-bottom: solid 1px color('base-lightest');
+  .usa-navbar {
+    width: 100%;
+    .usa-logo {
+      @include at-media($theme-navigation-width) {
+        margin-top: units(1);
+        margin-bottom: units(1);
+      }
+    }
+  }
+}
+
+.usa-header {
+  + .usa-section,
+  + main {
+    @include at-media($theme-navigation-width) {
+      border-top: none;
     }
   }
 }
