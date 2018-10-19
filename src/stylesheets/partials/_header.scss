@@ -3,15 +3,6 @@ $header-link-color: #ffffff;
 .usgs-header {
   background-color: $usgs-blue;
 
-  .usa-banner {
-    .usa-accordion {
-      width: units('desktop');
-    }
-    .usa-banner-content {
-      @include grid-container('desktop');
-    }
-  }
-
   .usgs-banner-container {
     @include grid-container($theme-site-max-width);
 
@@ -40,29 +31,10 @@ $header-link-color: #ffffff;
         }
       }
     }
-
-    .usgs-header-links-container {
-      font-size: $theme-small-font-size;
-      @include at-media('mobile') {
-        #usgs-home-link {
-          font-size: 0;
-        }
-      }
-      @include at-media('mobile') {
-        //font-size: $theme-base-font-size
-      }
-      display: inline-block;
-      float: right;
-
-      ul {
-        @include unstyled-list();
-      }
-    }
   }
 }
 
 #skip {
-
   a {
     position: absolute;
     left: -10000px;

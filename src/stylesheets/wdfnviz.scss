@@ -12,3 +12,9 @@ main {
   margin: 1em auto;
   padding: 0 1em;
 }
+
+.usgs-content {
+  max-width: units($theme-site-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
