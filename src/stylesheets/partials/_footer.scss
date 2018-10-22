@@ -3,7 +3,7 @@ $footer-text-color: #ffffff;
 footer {
   background-color: $usgs-blue;
   background-clip: padding-box;
-  padding: 1em;
+  padding: 1em 0;
 
   .usgs-footer-container {
     @include grid-container($theme-site-max-width);

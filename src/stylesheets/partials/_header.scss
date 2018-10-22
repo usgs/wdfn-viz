@@ -1,5 +1,117 @@
 $header-link-color: #ffffff;
 
+
+.usgs-banner.usa-banner {
+  // Override default padding and min height on the USA banner.
+  .usa-banner-header {
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    min-height: 0;
+  }
+}
+
+.usgs-header.usa-header-extended {
+  background-color: $usgs-blue;
+
+  // For the section immediately after the header, have no top border.
+  + .usa-section,
+  + main {
+    @include at-media($theme-navigation-width) {
+      border-top: none;
+    }
+  }
+
+  .usa-logo {
+    display: inline-block;
+    max-width: none;
+
+    @include at-media($theme-navigation-width) {
+      margin-top: units(2);
+      margin-bottom: units(2);
+      font-size: font-size($theme-header-font-family, 'sm') !important;
+      line-height: line-height($theme-header-font-family, 2);
+    }
+
+    img {
+      vertical-align: top;
+      padding: 0.4rem 0.4rem 0.4rem 0;
+      height: 3.1875rem;
+        margin: 0;
+      &.usgs-img-small {
+        display: inline-block;
+        @include at-media('mobile-lg') {
+          display: none;
+        }
+      }
+      &.usgs-img-medium {
+        display: none;
+        padding: 0.7rem 0.4rem 0.7rem 0;
+        @include at-media('mobile-lg') {
+          display: inline-block;
+        }
+        @include at-media('desktop') {
+          display: none;
+        }
+      }
+      &.usgs-img-large {
+        display: none;
+        @include at-media('desktop') {
+          display: inline-block;
+          height: 4.0625rem;
+        }
+      }
+      @include at-media('tablet') {
+        height: 3.625rem;
+        padding-right: .5rem;
+      }
+    }
+
+    .usa-logo-text {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 3.1875rem;
+      font-size: 0.7em;
+      a {
+        color: white;
+        display: inline-block;
+      }
+      @include at-media('mobile') {
+        margin: 0;
+        font-size: 1em;
+      }
+      @include at-media('mobile-lg') {
+        font-size: 1.1em;
+      }
+      @include at-media('tablet') {
+        font-size: 1.2em;
+        line-height: 3.625rem;
+        padding-left: .5rem;
+      }
+      @include at-media('desktop') {
+        line-height: 4.0625rem;
+      }
+    }
+  }
+
+  .usa-nav {
+    background-color: color('gray-5');
+  }
+  .usa-nav-secondary-links {
+    a {
+      color: white;
+      display: inline-block;
+      font-size: font-size($theme-navigation-font-family, '2xs');
+      text-decoration: none;
+
+      &:hover {
+        color: color('primary-lighter');
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/*
 .usgs-header {
   background-color: $usgs-blue;
 
@@ -81,3 +193,4 @@ $header-link-color: #ffffff;
     height: auto;
   }
 }
+*/
