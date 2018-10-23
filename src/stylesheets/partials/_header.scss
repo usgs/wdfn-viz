@@ -22,7 +22,7 @@ $header-link-color: #ffffff;
   }
 
   .usa-logo {
-    display: inline-block;
+    display: flex;
     max-width: none;
 
     @include at-media($theme-navigation-width) {
@@ -33,12 +33,14 @@ $header-link-color: #ffffff;
     }
 
     img {
+      flex: none;
       vertical-align: top;
       padding: 0.4rem 0.4rem 0.4rem 0;
       height: 3.1875rem;
-        margin: 0;
+      margin: 0;
+      min-width: 0;
+      object-fit: contain;
       &.usgs-img-small {
-        display: inline-block;
         @include at-media('mobile-lg') {
           display: none;
         }
@@ -47,7 +49,7 @@ $header-link-color: #ffffff;
         display: none;
         padding: 0.7rem 0.4rem 0.7rem 0;
         @include at-media('mobile-lg') {
-          display: inline-block;
+          display: block;
         }
         @include at-media('desktop') {
           display: none;
@@ -56,21 +58,16 @@ $header-link-color: #ffffff;
       &.usgs-img-large {
         display: none;
         @include at-media('desktop') {
-          display: inline-block;
           height: 4.0625rem;
+          display: block;
         }
-      }
-      @include at-media('tablet') {
-        height: 3.625rem;
-        padding-right: .5rem;
       }
     }
 
     .usa-logo-text {
-      display: inline-block;
-      vertical-align: top;
-      line-height: 3.1875rem;
-      font-size: 0.7em;
+      align-self: center;
+      overflow: hidden;
+      flex: auto;
       a {
         color: white;
         display: inline-block;
@@ -82,13 +79,9 @@ $header-link-color: #ffffff;
       @include at-media('mobile-lg') {
         font-size: 1.1em;
       }
-      @include at-media('tablet') {
-        font-size: 1.2em;
-        line-height: 3.625rem;
-        padding-left: .5rem;
-      }
       @include at-media('desktop') {
-        line-height: 4.0625rem;
+        font-size: 1.2em;
+        padding-left: .5rem;
       }
     }
   }
