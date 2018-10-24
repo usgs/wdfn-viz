@@ -1,9 +1,13 @@
 $footer-text-color: #ffffff;
 
 footer {
-  @include grid-container($theme-site-max-width);
   background-color: $usgs-blue;
-  padding: 1em;
+  background-clip: padding-box;
+  padding: 1em 0;
+
+  .usgs-footer-container {
+    @include grid-container($theme-site-max-width);
+  }
 
   .usgs-footer-nav {
     background-color: $usgs-blue;
