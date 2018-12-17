@@ -13,3 +13,24 @@ script:
 - npm test
 ##- cat ./coverage/F*/lcov.info | node ./node_modules/.bin/codacy-coverage
 
+before_deploy: |
+  PKG_VERSION=$(node -p "require('./package.json').version")
+  NPM_TAG="latest"
+  if [[ ${PKG_VERSION} =~ -snapshot$ ]]; then
+    NPM_TAG="snapshot"
+    SHORT_COMMIT_HASH=$(git rev-parse --short HEAD)
+    UNIQ_PKG_VERSION="${PKG_VERSION}.${SHORT_COMMIT_HASH}"
+    npm --no-git-tag-version version ${UNIQ_PKG_VERSION}
+  fi
+
+deploy:
+  skip_cleanup: true
+  provider: npm
+  tag: "$NPM_TAG"
+  email:
+    secure: "Ahy/LnMilv/ui8qqmmUbLbdllk67mMqYaZB9RhYSo9v8eTNkWhjYvk7NXumPRVDp4a+zf2fW47ifhd08tsZeTiD/zjXYQS71jD2yk4mbjnK+VrHzDuile/DIkYfi49/qO+UYURrwvoPlGPN7OCpye9HQdLijTVh1NzqTP01dWV4dm3HZkz51Ie9Gw0S3ci/coOtI1MZTJl6NYpL0z+ZBnZqq3nOYhxDYi8GJLZ5zAcNLTVoLXgrmh2RUPx4DzmsELgHinqiYA8bvBHRJGoMx4aMmwk59/6a789GMugjgu0bFunPIaiBPCffOxTGfdp9MHGstdhcl9BNSH1JFTSoqUdIpX79xBpECQvkbAPtGY1RnqiChjE/RgocD2ric5YWziifCEdviV6GZ9hF6b6iX9yxyTSB3skZN4+/fQ6hxyZbZNtUBP6JoFwXl1XWEolAqbeGE5EKH3rNzgWgCNMHOeUh3LSJJIAtgJ2FzQLGYH00BmV0yGFqWY3saDmS/2JZv7fdDxsPrkq0TDnafc77kn5FNVq163xZw7uiC3JbyiCeurmQuvbcaUFd4wECVL7F1S1VMPCipPt/8YsJLoBTSE/m3+SWqq8ge9eHDYXZ5TGuxQ3Vyp62+eCjZa9hcTbOyWfWKmQG3z/nX02IuYtzqfEzgzgLS1quZJuTDIwqH32M="
+  api_key:
+    secure: VpkWLneORLi6VJk4b2jZO0rJrGaF1GUFFmeiLQ8X9P0pSa9uZTLCyG5XCUTBT8DPGd+r10HBXI+ij5UrbGbCFPSNcGyqxtXdkg7vru92oU7Y8bYw75A65zYkBzexH2qvvjuTp0hf5eTG4xP1pEhYAi3f20dROwsW6DBHtEX7pRxQpIfLy2I7Pm5C8LX8HsZyCexKjoTHZY2x1sIUenU8ZU13EWBGt7Ir301rnE6K/jujf1dORa5jEztdgBSbVIjJPC6jEWZ/gXM2MMok2KjUCRj/rln1WHN/PIMd+Nd0Mp7rObk4bHraBHmJLoYf7BRfoLfp+Qggt4FIBqICCaZGdq5q275uUBkmEfHhMrl8nnhUtXPJMobXVHIGikBQM/fSD27TrlmGvGGdNPJi6KP+UYbH3zk+LIqIB2+m1o22kRtgxO4Qbq2jbo3+a4IcdrTyVmCvaj5BBHdEJWYGBOuDGjpZXNvWOHE7VjrCw6tV7R9LZmkJFcEtdcPOJ7ufQXo6Xro3JKx1qFigo1kPoucuKLzeVCXq57H2MhBTz1ulnZw5A+gtjhx53J35WvOQHqsLI3GydRxmFCZSPmCHe3W4umN16B5AvlO1qZsUlt/a1G+UYzNqRb6xP9Z6usM4x0FOyn1m86K3yXgIyWYSia7nlQiqJME5CYBTgLA3mM7judk=
+  on:
+    repo: usgs/wdfn-viz
+    branch: master
