@@ -57,14 +57,14 @@
     "ajv": "^6.5.4",
     "codacy-coverage": "^3.4.0",
     "css-mqpacker": "^7.0.0",
-    "cssnano": "^4.1.5",
+    "cssnano": "^4.1.8",
     "eslint": "^5.12.0",
     "eslint-plugin-jasmine": "^2.10.1",
     "jasmine-core": "^3.2.1",
-    "karma": "^3.1.4",
+    "karma": "^4.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
-    "karma-jasmine": "^1.1.2",
+    "karma-jasmine": "^2.0.1",
     "karma-js-coverage": "^0.4.0",
     "karma-rollup-preprocessor": "^6.1.2",
     "live-server": "^1.2.1",
@@ -82,6 +82,6 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "stylelint": "^9.6.0",
     "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-scss": "^3.3.4"
+    "stylelint-scss": "^3.5.1"
   }
 }
