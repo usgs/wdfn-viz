@@ -19,7 +19,7 @@ module.exports = function (config) {
 
         //list of files / patterns to load in the browser
         files: [
-            'temp-test-manifest.js'
+            {pattern: 'tests/js/**/*.spec.js', watched: false}
         ],
 
         // list of files to exclude
@@ -28,11 +28,7 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            // source files, that you wanna generate coverage for
-            // do not include tests or libraries
-            // (these files will be instrumented by Istanbul)
-            'src/js/*.js': ['rollup'],
-            'temp-test-manifest.js': ['rollup']
+            'tests/js/**/*.spec.js': ['rollup']
         },
 
         // test results reporter to use
@@ -69,7 +65,13 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Firefox'],
+        browsers: ['FirefoxHeadless'],
+        customLaunchers: {
+            FirefoxHeadless: {
+                base: 'Firefox',
+                flags: ['-headless']
+            }
+        },
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
