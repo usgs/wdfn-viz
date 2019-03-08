@@ -7,5 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Updated build USWDS to 2.0.0-beta.4
+- A git tag is created for each release
 
 [Unreleased]: https://github.com/usgs/wdfn-viz/compare/wdfn-viz-0.10.0...master
