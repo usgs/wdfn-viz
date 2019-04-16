@@ -54,7 +54,7 @@
     "uswds": "^2.0.0-beta.5"
   },
   "devDependencies": {
-    "ajv": "^6.9.2",
+    "ajv": "^6.10.0",
     "codacy-coverage": "^3.4.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
