@@ -58,7 +58,7 @@
     "codacy-coverage": "^3.4.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
-    "eslint": "^5.14.1",
+    "eslint": "^5.16.0",
     "eslint-plugin-jasmine": "^2.10.1",
     "jasmine-core": "^3.2.1",
     "karma": "^4.0.1",
