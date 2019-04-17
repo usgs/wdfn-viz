@@ -10,8 +10,16 @@ $header-link-color: #ffffff;
   }
 }
 
-.usgs-header.usa-header-extended {
+.usgs-header {
   background-color: $usgs-blue;
+
+  .usgs-header-container {
+    @include grid-container($theme-site-max-width);
+
+    .usa-nav-link {
+      padding-top: unit(4)
+    }
+  }
 
   // For the section immediately after the header, have no top border.
   + .usa-section,
