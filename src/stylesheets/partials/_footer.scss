@@ -1,34 +1,36 @@
-$footer-text-color: #ffffff;
 
 footer {
   background-color: $usgs-blue;
-  background-clip: padding-box;
   padding: 1em 0;
 
+  // Put the header bar in a container and control the width of that container so that it will not stretch the whole width of the page
   .usgs-footer-container {
     @include grid-container($theme-site-max-width);
   }
 
   .usgs-footer-nav {
-    background-color: $usgs-blue;
+    // Add some space around the vertical dividing lines
     padding: 1em 0 .5em 0;
-    color: $footer-text-color;
-
+    // color the vertical dividing lines
+    color: color('white');
+    // Add a line between the upper and lower row of links
     &:first-of-type {
-      border-bottom: solid 1px $footer-text-color;
+      border-bottom: solid 1px color('white');
       padding-top: 0;
     }
   }
 
+  // Add style to the actual links in the footer
   .usgs-footer-link {
-    display: inline;
+    display: inline-block;
     padding-left: .5em;
     padding-right: .5em;
-    color: $footer-text-color;
+    color: color('white');
     text-decoration: none;
 
+    // Keep the links the same color after they are click as they were before.
     &:visited {
-      color: $footer-text-color;
+      color: color('white');
     }
   }
 }
