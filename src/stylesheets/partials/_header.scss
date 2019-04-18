@@ -48,8 +48,10 @@
   // Style the secondary links (the links above the search bar when viewed at desktop widths)
   .usa-nav__secondary-links {
     a {
+      // Make the secondary links blue when they are compressed down it to the menu
+      // button (since the background there is different the when the application is at desktop dimensions)
       color: color('blue-50');
-
+      // Make the secondary links white at desktop resolution, so they show up against the blue header
       @include at-media('desktop') {
         color: color('white');
       }
