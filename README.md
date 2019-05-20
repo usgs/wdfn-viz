@@ -39,7 +39,7 @@ for the page's favicon by adding the following line within the <head> section:
 <link rel="shortcut icon" type="image/ico" href="{{ url for 'img/usgs_favicon.ico'}}">
 ```
 
-Below are examples of commands that could be used to collect the image and font assets assets.
+Below are examples of commands that could be used to collect the image and font assets.
 ```
 % mkdir -p dist/img && cp -r node_modules/uswds/src/img/* dist/img && cp -r node_modules/wdfn-viz/src/img/* dist/img
 % mkdir -p dist/fonts && cp node_modules/uswds/src/fonts/* dist/fonts
