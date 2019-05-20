@@ -24,7 +24,7 @@ npm install wdfn-viz@snapshot
 The main Sass stylesheet that should be imported into a web page's Sass file and is at /src/stylesheets/wdfnviz.scss.
 This will also include the USWDS style sheets so a separate import is not required. This directory should be 
 specified on the --include-path option along with the uswds/src/stylesheets when the site's Sass is built. When building 
-the style sheets the css should also beprocessed by postcss as follows:
+the style sheets the css should also be processed by postcss as follows:
 
 ```
 % node-sass --include-path node_modules/wdfn-via/src/stylesheets --include-path node_modules/uswds/src/stylesheets src/styles.main.css dist/main.css
@@ -33,7 +33,7 @@ the style sheets the css should also beprocessed by postcss as follows:
 
 When building the assets, the images should be collected in a common directory and specified in the project's Sass
 files using the $image-path variable. This should include the images in wdfn-viz/src/img that provide the USGS favicon and
-logos as well as the uswds/src/img directory. If using USWDS images those will also need to be collected. The images include a usgs_favicon.ico that can be used
+logos. If using USWDS images those will also need to be collected. The images include a usgs_favicon.ico that can be used
 for the page's favicon by adding the following line within the <head> section:
 ```
 <link rel="shortcut icon" type="image/ico" href="{{ url for 'img/usgs_favicon.ico'}}">
@@ -45,14 +45,14 @@ Below are examples of commands that could be used to collect the image and font 
 % mkdir -p dist/fonts && cp node_modules/uswds/src/fonts/* dist/fonts
 ```
 
-The javascript can be imported and provides USWDS javascript as well as the ability to log unhandled exceptions to
+The javascript should be imported and provides USWDS javascript as well as the ability to log unhandled exceptions to
 Google Analytics if window.ga is defined. In order to use, a loading function should be defined which will be executed 
 when the page loads. Below is a simple example:
 ```javascript
 import wdfnviz from 'wdfn-viz';
 
 const load = function () {
-    let nodes = document.getElementsByClassName('component');
+    null;  Add code that should get executed when the page is loaded
 }
 
 wdfnviz.main(load);
