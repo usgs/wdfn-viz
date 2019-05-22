@@ -32,14 +32,15 @@ the style sheets the css should also be processed by postcss as follows:
 ```
 
 When building the assets, the images should be collected in a common directory and specified in the project's Sass
-files using the $image-path variable. This should include the images in wdfn-viz/src/img that provide the USGS favicon and
+files using the $theme-image-path variable. This should include the images in wdfn-viz/src/img that provide the USGS favicon and
 logos. If using USWDS images those will also need to be collected. The images include a usgs_favicon.ico that can be used
 for the page's favicon by adding the following line within the <head> section:
 ```
 <link rel="shortcut icon" type="image/ico" href="{{ url for 'img/usgs_favicon.ico'}}">
 ```
 
-Below are examples of commands that could be used to collect the image and font assets.
+The fonts should also be collected in a common directory and specified in the project's Sass files using the $theme-font-path
+variable. Below are examples of commands that could be used to collect the image and font assets.
 ```
 % mkdir -p dist/img && cp -r node_modules/uswds/src/img/* dist/img && cp -r node_modules/wdfn-viz/src/img/* dist/img
 % mkdir -p dist/fonts && cp node_modules/uswds/src/fonts/* dist/fonts
