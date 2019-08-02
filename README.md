@@ -43,7 +43,7 @@ The fonts should also be collected in a common directory and specified in the pr
 variable. Below are examples of commands that could be used to collect the image and font assets.
 ```
 % mkdir -p dist/img && cp -r node_modules/uswds/src/img/* dist/img && cp -r node_modules/wdfn-viz/src/img/* dist/img
-% mkdir -p dist/fonts && cp node_modules/uswds/src/fonts/* dist/fonts
+% mkdir -p dist/fonts && cp -r node_modules/uswds/src/fonts/* dist/fonts
 ```
 
 The javascript should be imported and provides USWDS javascript as well as the ability to log unhandled exceptions to
