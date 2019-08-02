@@ -27,7 +27,7 @@ specified on the --include-path option along with the uswds/src/stylesheets when
 the style sheets the css should also be processed by postcss as follows:
 
 ```
-% node-sass --include-path node_modules/wdfn-via/src/stylesheets --include-path node_modules/uswds/src/stylesheets src/styles.main.css dist/main.css
+% node-sass --include-path node_modules/wdfn-viz/src/stylesheets --include-path node_modules/uswds/src/stylesheets src/styles.main.css dist/main.css
 % postcss dist/main.css --no-map --use autoprefixer -o dist/main.css
 ```
 
