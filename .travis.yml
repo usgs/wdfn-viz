@@ -5,6 +5,10 @@ node_js:
 addons:
   firefox: latest
 
+branches:
+  only:
+    - master
+
 script:
 - npm test
 ##- cat ./coverage/F*/lcov.info | node ./node_modules/.bin/codacy-coverage
