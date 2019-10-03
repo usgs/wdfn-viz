@@ -10,8 +10,7 @@ branches:
     - master
 
 script:
-- npm test | ./node_modules/.bin/codacy-coverage
-##- cat ./coverage/F*/lcov.info | node ./node_modules/.bin/codacy-coverage
+- npm test
 
 before_deploy: |
   PKG_VERSION=$(node -p "require('./package.json').version")
