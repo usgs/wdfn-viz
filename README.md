@@ -56,6 +56,9 @@ Below is an example of the process:
 % postcss dist/main.css  -o dist/main.css
 ```
 
+Postcss generates internal sourcemaps by default. You may want to consider using the --map option to create external map files
+or if you want to minimize your css assets, you may want to disable entirely by using --no-map
+
 When building the assets, the images should be collected in a common directory and specified in the project's Sass
 files using the $theme-image-path variable. This should include the images in wdfn-viz/src/img that provide the USGS favicon and
 logos. If using USWDS images those will also need to be collected. The images include a usgs_favicon.ico that can be used
