@@ -10,7 +10,7 @@ branches:
     - master
 
 script:
-- npm test
+- npm test | ./node_modules/.bin/codacy-coverage
 ##- cat ./coverage/F*/lcov.info | node ./node_modules/.bin/codacy-coverage
 
 before_deploy: |
