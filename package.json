@@ -51,7 +51,7 @@
     "src"
   ],
   "dependencies": {
-    "uswds": "^2.0.3"
+    "uswds": "2.2.1"
   },
   "devDependencies": {
     "ajv": "^6.10.2",
