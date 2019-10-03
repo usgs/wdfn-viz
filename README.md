@@ -24,12 +24,40 @@ npm install wdfn-viz@snapshot
 The main Sass stylesheet that should be imported into a web page's Sass file and is at /src/stylesheets/wdfnviz.scss.
 This will also include the USWDS style sheets so a separate import is not required. This directory should be 
 specified on the --include-path option along with the uswds/src/stylesheets when the site's Sass is built. When building 
-the style sheets the css should also be processed by postcss as follows:
+the style sheets the css should also be processed by postcss using the autoprefixer, cssnano, and css-mq-packer using a postcss.config.js file:
+```javascript
+const autoprefixerOptions = [
+    '>2%',
+    'Last 2 versions',
+    'IE 11'
+];
 
+module.exports = ctx => ({
+    map: Object.assign({}, ctx.options.map, {inline: false}),
+    parser: ctx.options.parser,
+    plugins: {
+        autoprefixer: autoprefixerOptions,
+        cssnano: {
+            autoprefixer: {
+                browsers: autoprefixerOptions
+            }
+        },
+        'css-mqpacker': {
+            sort: true
+        }
+    }
+});
+```
+You may also want to include postcss-flexbugs-fixes plugin as is done for building wdfn-viz.
+
+Below is an example of the process:
 ```
 % node-sass --include-path node_modules/wdfn-viz/src/stylesheets --include-path node_modules/uswds/src/stylesheets src/styles.main.css dist/main.css
-% postcss dist/main.css --no-map --use autoprefixer -o dist/main.css
+% postcss dist/main.css  -o dist/main.css
 ```
+
+Postcss generates internal sourcemaps by default. You may want to consider using the --map option to create external map files
+or if you want to minimize your css assets, you may want to disable entirely by using --no-map
 
 When building the assets, the images should be collected in a common directory and specified in the project's Sass
 files using the $theme-image-path variable. This should include the images in wdfn-viz/src/img that provide the USGS favicon and

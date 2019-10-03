@@ -1,5 +1,5 @@
 const autoprefixerOptions = [
-    '> 1%',
+    '>2%',
     'Last 2 versions',
     'IE 11'
 ];
