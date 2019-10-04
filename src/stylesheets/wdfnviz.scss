@@ -6,7 +6,6 @@ $usgs-blue: #00264c;
 @import './partials/header';
 @import './partials/footer';
 
-
 main {
   @include grid-container($theme-site-max-width);
   margin: 1em auto;
