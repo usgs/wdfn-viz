@@ -54,8 +54,8 @@
     "uswds": "2.2.1"
   },
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "ajv": "^6.10.2",
-    "codacy-coverage": "^3.4.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "eslint": "^6.5.0",
