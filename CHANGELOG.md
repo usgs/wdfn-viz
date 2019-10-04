@@ -5,8 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
+
+## 1.1.0 - 2019-10-04
 ### Changed
-- Updated USWDS to 2.2.1
+- Updated USWDS to 2.2.1 
+- Removed unused dependencies and updated linting rules for scss to match USWDS.
 
 ### Fixed
 - Remove obsolete sass variable from stylesheet
@@ -20,5 +23,3 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated build USWDS to 2.0.1
 - A git tag is created for each release
-
-
