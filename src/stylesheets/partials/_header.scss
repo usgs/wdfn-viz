@@ -1,11 +1,6 @@
-
 .usgs-header {
   // Set the header bar color to official USGS blue
   background-color: $usgs-blue;
-  // Put the header bar in a container and control the width of that container so that it will not stretch the whole width of the page
-  //.usgs-header-container {
-  //  @include grid-container;
-  //}
 
   // For the section immediately after the header, have no top border.
   + main {
@@ -62,4 +57,3 @@
     }
   }
 }
-
