@@ -80,7 +80,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-istanbul": "^2.0.1",
     "rollup-plugin-node-resolve": "^4.2.4",
-    "stylelint": "^10.1.0",
+    "stylelint": "^11.0.0",
     "stylelint-scss": "^3.11.1"
   }
 }
