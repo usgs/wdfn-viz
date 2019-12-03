@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+## 1.2.0 - 2019-12-02
+### Changed
+- Updated USWDS to 2.3.1
+- Build process has been tested with nodejs 12.x
+
 ## 1.1.0 - 2019-10-04
 ### Changed
 - Updated USWDS to 2.2.1 
