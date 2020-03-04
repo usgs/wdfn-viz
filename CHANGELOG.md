@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 1.4.0 - ???
+### Changed
+- Updated USWDS to 2.5.1
+- Using Dart Sass to compile the style sheets
+- Using postcss-csso to minimize the style sheets
+
 ## 1.3.0 - 2019-12-20
 ### Changed
 - Updated USWDS to 2.4.0
