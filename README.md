@@ -21,10 +21,11 @@ To install the latest development snapshot (containing the current state of the 
 npm install wdfn-viz@snapshot
 ```
 
+We recommend building the stylesheets with Dart sass (npm install sass).
 The main Sass stylesheet that should be imported into a web page's Sass file and is at /src/stylesheets/wdfnviz.scss.
-This will also include the USWDS style sheets so a separate import is not required. This directory should be 
-specified on the --include-path option along with the uswds/src/stylesheets when the site's Sass is built. When building 
-the style sheets the css should also be processed by postcss using the autoprefixer, cssnano, and css-mq-packer using a postcss.config.js file:
+This will also include the USWDS style sheets so a separate import is not required.  This directory should be 
+specified on the --load-path option along with the uswds/src/stylesheets when the site's Sass is built. When building 
+the style sheets the css should also be processed by postcss using the autoprefixer and postcss-csso using a postcss.config.js file:
 ```javascript
 const autoprefixerOptions = [
     '>2%',
@@ -37,13 +38,8 @@ module.exports = ctx => ({
     parser: ctx.options.parser,
     plugins: {
         autoprefixer: autoprefixerOptions,
-        cssnano: {
-            autoprefixer: {
-                browsers: autoprefixerOptions
-            }
-        },
-        'css-mqpacker': {
-            sort: true
+        'postcss-csso': {
+            forceMediaMerge: false
         }
     }
 });
@@ -52,7 +48,7 @@ You may also want to include postcss-flexbugs-fixes plugin as is done for buildi
 
 Below is an example of the process:
 ```
-% node-sass --include-path node_modules/wdfn-viz/src/stylesheets --include-path node_modules/uswds/src/stylesheets src/styles.main.css dist/main.css
+% sass --load-path node_modules/wdfn-viz/src/stylesheets --include-path node_modules/uswds/src/stylesheets src/styles.main.css dist/main.css
 % postcss dist/main.css  -o dist/main.css
 ```
 
