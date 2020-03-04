@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 1.4.0 - ???
 ### Changed
 - Updated USWDS to 2.5.1
+- Updated header template to add ```aria-label="Official government website"``` to the top "usa-banner" section
+- Updated footer template to add ```aria-label="Footer Navigation"``` to the usgs-footer-container and changed it to a nav element
 - Using Dart Sass to compile the style sheets
 - Using postcss-csso to minimize the style sheets
 
