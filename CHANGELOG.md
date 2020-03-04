@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated footer template to add ```aria-label="Footer Navigation"``` to the usgs-footer-container and changed it to a nav element
 - Using Dart Sass to compile the style sheets
 - Using postcss-csso to minimize the style sheets
+- Updated the .stylelintrc.json to use  the same as USWDS without the prettier plugin.
 
 ## 1.3.0 - 2019-12-20
 ### Changed
