@@ -51,7 +51,7 @@
     "src"
   ],
   "dependencies": {
-    "uswds": "2.5.1"
+    "uswds": "2.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
