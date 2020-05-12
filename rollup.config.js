@@ -3,9 +3,9 @@
  * NOTE: This is a CommonJS module so it can be imported by Karma.
  */
 
-const buble = require('rollup-plugin-buble');
-const commonjs = require('rollup-plugin-commonjs');
-const resolve = require('rollup-plugin-node-resolve');
+const buble = require('@rollup/plugin-buble');
+const commonjs = require('@rollup/plugin-commonjs');
+const resolve = require('@rollup/plugin-node-resolve');
 
 const pkg = require('./package.json');
 
