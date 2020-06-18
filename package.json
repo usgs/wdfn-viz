@@ -1,6 +1,6 @@
 {
   "name": "wdfn-viz",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Provides templates and style sheets which implement the USGS visual standards for headers and footers",
   "scripts": {
     "build": "npm run clean && mkdir -p dist && run-p build:*",
