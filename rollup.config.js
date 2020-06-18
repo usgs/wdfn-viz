@@ -12,7 +12,7 @@ const pkg = require('./package.json');
 module.exports = {
     input: 'src/js/main.js',
     plugins: [
-        resolve({
+        resolve.nodeResolve({
             mainFields: ['module']
         }),
         commonjs(),
