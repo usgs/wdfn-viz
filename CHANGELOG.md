@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated USWDS to 2.7.1
 
 ## 1.6.0 - 2020-05-12
-### Changesd
+### Changed
 - Updated USWDS to 2.7.0
 
 ## 1.5.0 - 2020-04-06
