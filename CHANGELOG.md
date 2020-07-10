@@ -3,8 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+## 1.7.0 - 2020-07-10
+### Changed
+- Updated to USWDS 2.8
+- Updated header template (src/templates/header.html) to reflect new header guidance. See https://github.com/uswds/uswds/releases/tag/v2.8.0 and look for Updates to the banner. Users of this package will need to update their own templates.
+
 ## 1.6.2 - 2020-06-18
-## Changed
+### Changed
 - Updated USWDS to 2.7.1
 
 ## 1.6.0 - 2020-05-12
