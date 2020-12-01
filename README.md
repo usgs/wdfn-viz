@@ -89,6 +89,13 @@ Example html templates for the header and footer can be found here: ```src/templ
 and footers add the markup in those templates to your pages, adjusting the image url in the header.html template
 as needed for the USGS logo and federal government logos.
 
+## Using without building stylesheets and javascript bundling
+You can use the prebuilt stylesheet and javascript bundle if desired. This can be done by including the following in your markup in the <head> section.
+```
+<link rel="stylesheet" href="wdfnviz.css">
+<script src="wdfnviz.js"></script>
+```
+
 ## Publishing to npm
 
 TravisCI is configured to publish to the [wdfn-viz](https://www.npmjs.com/package/wdfn-viz) npm package when commits are made to the master branch.
