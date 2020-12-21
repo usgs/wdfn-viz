@@ -2,9 +2,6 @@ language: node_js
 node_js:
 - lts/*
 
-addons:
-  firefox: latest
-
 branches:
   only:
     - master

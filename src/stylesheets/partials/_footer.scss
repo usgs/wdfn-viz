@@ -17,6 +17,18 @@ footer {
       border-bottom: solid 1px color('white');
       padding-top: 0;
     }
+    .social-media-links {
+      float: right;
+      display:inline-block;
+      span {
+        vertical-align: top;
+      }
+      a {
+        svg {
+          color: color('white');
+        }
+      }
+    }
   }
 
   // Add style to the actual links in the footer
