@@ -1,11 +1,12 @@
 /**
  * Rollup configuration.
- * NOTE: This is a CommonJS module so it can be imported by Karma.
  */
 
 const buble = require('@rollup/plugin-buble');
 const commonjs = require('@rollup/plugin-commonjs');
 const resolve = require('@rollup/plugin-node-resolve');
+
+const bubleConfig = require('./buble.config');
 
 const pkg = require('./package.json');
 
@@ -16,12 +17,7 @@ module.exports = {
             mainFields: ['module']
         }),
         commonjs(),
-        buble({
-            objectAssign: 'Object.assign',
-            transforms: {
-                dangerousForOf: true
-            }
-        })
+        buble(bubleConfig)
     ],
     output: [{
         file: pkg.main,
