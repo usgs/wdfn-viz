@@ -3,7 +3,7 @@
     "name": "Water Data for the Nation Visual ID",
     "organization": "U.S. Geological Survey",
     "description": "Provides templates and style sheets that provide headers and footers for USGS WDFN sites",
-    "version": "v0.1.0",
+    "version": "1.9.0",
     "status": "Development",
 
     "permissions": {
@@ -41,7 +41,7 @@
     },
 
     "date": {
-      "metadataLastUpdated": "2018-06-20"
+      "metadataLastUpdated": "2020-12-21"
     }
   }
 ]
