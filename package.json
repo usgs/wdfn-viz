@@ -10,7 +10,7 @@
     "build:html": "nunjucks --path src --out dist index.html",
     "build:images": "mkdir -p dist/img && cp -r src/img/* dist/img && cp -r node_modules/uswds/dist/img/* dist/img",
     "build:sass": "mkdir -p dist/sass && cp -r src/stylesheets/* dist/sass && cp -r node_modules/uswds/dist/scss/* dist/sass",
-    "build:uswdsinit": "cp -r node_modules/uswds/dist/js/uswds-init.min.js dist",
+    "build:uswdsinit": "cp -r node_modules/uswds/dist/js/uswds-init.min.* dist",
     "clean": "rm -rf dist && mkdir dist",
     "prepare": "npm run build",
     "serve": "live-server --port=9000 --cors dist",
