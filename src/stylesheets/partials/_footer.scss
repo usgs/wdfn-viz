@@ -18,7 +18,11 @@ footer {
       padding-top: 0;
     }
     .social-media-links {
-      float: right;
+      @include at-media('desktop') {
+        padding: 0;
+        float: right;
+      }
+      padding: .5em .5em 0 .5em;
       display:inline-block;
       span {
         vertical-align: top;
