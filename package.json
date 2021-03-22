@@ -53,7 +53,7 @@
     "src"
   ],
   "dependencies": {
-    "uswds": "2.10.1"
+    "uswds": "2.11.1"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
