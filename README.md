@@ -85,6 +85,7 @@ wdfnviz.main(load);
 
 
 ```
+The javascript bundle that is created (which will contain your project specific javascript as well as the USWDS javascript) should be loaded inside the <body> tag. We recommend that this is done as the first tag in the body. The async attribute can be used.
 
 Example html templates for the header and footer can be found here: ```src/templates```. To implement the header
 and footers add the markup in those templates to your pages, adjusting the image url in the header.html template
