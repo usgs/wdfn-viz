@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         <script src="uswds-init.min.js"></script>
         <link rel="stylesheet" href="wdfnviz.css">
-        <script src="wdfnviz.js"></script>
         <title>Test Page - USGS Water Data For The Nation</title>
     </head>
     <body>
+        <script async src="wdfnviz.js"></script>
         {% macro url_for(path) %}{{ path }}{% endmacro %}
         {% include "templates/header.html" %}
         <main>

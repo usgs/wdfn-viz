@@ -28,9 +28,10 @@ specified on the --load-path option along with the uswds/src/stylesheets when th
 the style sheets the css should also be processed by postcss using the autoprefixer and postcss-csso using a postcss.config.js file:
 ```javascript
 const autoprefixerOptions = [
-    '>2%',
+    '> 2%',
     'Last 2 versions',
-    'IE 11'
+    'IE 11',
+    'not dead'
 ];
 
 module.exports = ctx => ({

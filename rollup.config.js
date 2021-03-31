@@ -5,10 +5,13 @@
 const buble = require('@rollup/plugin-buble');
 const commonjs = require('@rollup/plugin-commonjs');
 const resolve = require('@rollup/plugin-node-resolve');
+const {terser} = require('rollup-plugin-terser');
 
 const bubleConfig = require('./buble.config');
 
 const pkg = require('./package.json');
+
+const env = process.env.NODE_ENV || 'development';
 
 module.exports = {
     input: 'src/js/main.js',
@@ -17,7 +20,12 @@ module.exports = {
             mainFields: ['module']
         }),
         commonjs(),
-        buble(bubleConfig)
+        buble(bubleConfig),
+        env === 'production' && terser({
+                compress: {
+                    drop_console: true
+                }
+            })
     ],
     output: [{
         file: pkg.main,
