@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+## 1.12.0 - 2021-06-07
+- Updated USWDS to 2.11.2
+
 ## 1.11.0 - 2021-04-01
 - Updated USWDS to 2.11.1
 - The wdfnviz.js script must now be loaded within the body tag. We recommend putting it as the first tag inside body and use the async attribute.

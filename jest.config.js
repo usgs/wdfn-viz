@@ -11,5 +11,6 @@ module.exports = {
         '!**/coverage/**'
     ],
     clearMocks: true,
-    restoreMocks: true
-}
+    restoreMocks: true,
+    testEnvironment: 'jsdom'
+};
