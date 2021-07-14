@@ -1,7 +1,6 @@
-# WMA Water Data for the Nation USGS visual identity package
+# Permanently moved: WMA Water Data for the Nation USGS visual identity package
 
-[![Build Status](https://travis-ci.org/usgs/wdfn-viz.svg?branch=master)](https://travis-ci.org/usgs/wdfn-viz)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6faaca8b97f34929b141c4444d919e4e)](https://www.codacy.com/app/usgs_wma_dev/wdfn-viz?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=usgs/wdfn-viz&amp;utm_campaign=Badge_Grade)
+## As of 2021-07-14, this repo has been moved to https://code.usgs.gov/wma/iow/wdfn-viz.
 
 Provides Sass stylesheets and images that can be used when creating web pages that need to
 meet USGS visual identity standards. The stylesheets use USWDS (https://designsystem.digital.gov/)
